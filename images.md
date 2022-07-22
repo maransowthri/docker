@@ -6,7 +6,7 @@
 docker images
 ```
 
-### Remove particular image
+## Remove particular image
 
 ```bash
 docker rmi IMAGE_ID
