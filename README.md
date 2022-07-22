@@ -3,7 +3,7 @@
 Most used docker commands
 
 - [docker images](./images.md)
-- docker container
-- docker compose
-- docker logs
-- docker cp
+- [docker container](./container.md)
+- [docker compose](./compose.md)
+- [docker logs](./logs.md)
+- [docker cp](./cp.md)
