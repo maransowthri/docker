@@ -1,4 +1,4 @@
-# Docker Images Commands
+# `docker image` Commands
 
 ## List all images
 
