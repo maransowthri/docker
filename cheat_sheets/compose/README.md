@@ -1,4 +1,4 @@
-# Docker Compose Commands
+# `docker compose` Commands
 
 ## Docker Compose run & delete after execution
 

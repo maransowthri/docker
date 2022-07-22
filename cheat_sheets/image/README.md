@@ -3,11 +3,11 @@
 ## List all images
 
 ```bash
-docker images
+docker image ls
 ```
 
 ## Remove particular image
 
 ```bash
-docker rmi IMAGE_ID
+docker image rmi IMAGE_ID
 ```
