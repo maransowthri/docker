@@ -11,3 +11,9 @@ docker container inspect <container_id>
 ```bash
 docker container inspect --format='{{.LogPath}}' <container_id>
 ```
+
+## Finding container IP
+
+```bash
+docker container inspect --format '{{ .NetworkSettings.IPAddress }}' web_app
+```

@@ -37,3 +37,19 @@ docker container run -it <image_id> bash
 ```
 
 NOTE: container will be stopped if you exit from the bash
+
+## Running a container with a customized network
+
+```bash
+docker container run -p 8080:80 -d --name web_app1 --network my_app_net nginx
+```
+
+## Delete the container automatically as soon as you executed something
+
+```bash
+docker container run --rm -it centos:7 bash
+
+or
+
+docker container run --rm centos curl -s search:9200
+```
