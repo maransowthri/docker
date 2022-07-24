@@ -9,5 +9,17 @@ docker image ls
 ## Remove particular image
 
 ```bash
-docker image rmi IMAGE_ID
+docker image rm IMAGE_ID
+```
+
+## Check the history of an image
+
+```bash
+docker image history <image_id> 
+```
+
+## Read the meta data about the image
+
+```bash
+docker image inspect <image_id>
 ```
