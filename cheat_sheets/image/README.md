@@ -48,3 +48,9 @@ docker image push nginx
 ```bash
 docker image build -t maransowthri/nginx .
 ```
+
+## Cleaning up all images
+
+```bash
+docker image prune
+```

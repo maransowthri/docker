@@ -11,3 +11,4 @@
 - [docker container exec](./exec.md)
 - [docker container port](./port.md)
 - [docker container cp](./cp.md)
+- [docker container prune](./prune.md)

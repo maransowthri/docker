@@ -18,7 +18,7 @@ docker container run --name webapp <image_id>
 docker container run -p 80:80 -d <image_id>
 ```
 
-## Launching a container with a volume
+## Launching a container with a named volume
 
 ```bash
 docker container run -d -p 8080:8080 -v jenkins_volume:/var/jenkins_home --name jenkins_server jenkins_server:2.0
