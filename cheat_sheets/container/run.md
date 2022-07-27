@@ -53,3 +53,17 @@ or
 
 docker container run --rm centos curl -s search:9200
 ```
+
+## Assigning a volume to running container
+
+```bash
+docker container run -p 3306:3306 -d --name mysql -v mysql_db:/var/lib/mysql mysql
+```
+
+NOTE: if volume `mysql_db` is already there if will be reused, otherwise it will created automatically. For the path to be mounted `var/lib/mysql` you can find it in Dockerfile (check `VOLUME` command)
+
+## Biding local path as a volume to the container
+
+```bash
+docker container run -p 80:80 -d --name nginx -v /$(pwd):/usr/share/nginx/html nginx
+```
