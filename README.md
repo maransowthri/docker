@@ -11,5 +11,6 @@ Most used docker commands
 - [docker swarm](./cheat_sheets/swarm/README.md)
 - [docker node](./cheat_sheets/node/README.md)
 - [docker service](./cheat_sheets/service/README.md)
+- [docker update](./cheat_sheets/update/README.md)
 
 More commands and resources are at [https://github.com/bretfisher/udemy-docker-mastery](https://github.com/bretfisher/udemy-docker-mastery)
