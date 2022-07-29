@@ -8,5 +8,8 @@ Most used docker commands
 - [docker compose](./cheat_sheets/compose/README.md)
 - [docker system](./cheat_sheets/system/README.md)
 - [docker volume](./cheat_sheets/volume/README.md)
+- [docker swarm](./cheat_sheets/swarm/README.md)
+- [docker node](./cheat_sheets/node/README.md)
+- [docker service](./cheat_sheets/service/README.md)
 
 More commands and resources are at [https://github.com/bretfisher/udemy-docker-mastery](https://github.com/bretfisher/udemy-docker-mastery)

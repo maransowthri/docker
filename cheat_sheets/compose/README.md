@@ -44,6 +44,18 @@ NOTE: This does not include volumes
 docker compose down -v
 ```
 
+## Building image mentioned in the docker compose's dockerfile
+
+```bash
+docker compose build
+```
+
+## Bring down all containers + remove images that was built during up
+
+```bash
+docker compose down --rmi local
+```
+
 ## Docker Compose run & delete after execution
 
 ```bash

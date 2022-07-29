@@ -1,15 +1,15 @@
 services:
   drupal:
-    image: drupal
+    build: .
     ports:
-      - "80:80"
+      - '80:80'
     volumes:
       - drupal-modules:/var/www/html/modules
       - drupal-profiles:/var/www/html/profiles
       - drupal-sites:/var/www/html/sites
       - drupal-themes:/var/www/html/themes
   postgres:
-    image: postgres
+    image: postgres:14.3
     environment:
       - POSTGRES_PASSWORD=password
     volumes:
