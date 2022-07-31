@@ -42,3 +42,9 @@ docker service inspect <service_id>
 ```bash
 docker service logs <service_id>
 ```
+
+## Creating service with secrets
+
+```bash
+docker service create --name psql --secret psql_user --secret psql_pass -e POSTGRES_PASSWORD_FILE=/run/secrets/psql_pass -e POSTGRES_USER_FILE=/run/secrets/psql_user postgres
+```

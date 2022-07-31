@@ -7,16 +7,17 @@ Here is a basic diagram of how the 5 services will work:
 ![diagram](./architecture.png)
 
 - All images are on Docker Hub, so you should use editor to craft your commands locally,
-then paste them into swarm shell (at least that's how I'd do it)
+  then paste them into swarm shell (at least that's how I'd do it)
 - a `backend` and `frontend` overlay network are needed.
-Nothing different about them other than that backend will help protect database from the voting web app.
-(similar to how a VLAN setup might be in traditional architecture)
+  Nothing different about them other than that backend will help protect database from the voting web app.
+  (similar to how a VLAN setup might be in traditional architecture)
 - The database server should use a named volume for preserving data.
-Use the new `--mount` format to do this: `--mount type=volume,source=db-data,target=/var/lib/postgresql/data`
+  Use the new `--mount` format to do this: `--mount type=volume,source=db-data,target=/var/lib/postgresql/data`
 
 ### Services (names below should be service names)
 
 - vote
+
   - bretfisher/examplevotingapp_vote
   - web frontend for users to vote dog/cat
   - ideally published on TCP 80. Container listens on 80
@@ -24,6 +25,7 @@ Use the new `--mount` format to do this: `--mount type=volume,source=db-data,tar
   - 2+ replicas of this container
 
 - redis
+
   - redis:3.2
   - key-value storage for incoming votes
   - no public ports
@@ -31,6 +33,7 @@ Use the new `--mount` format to do this: `--mount type=volume,source=db-data,tar
   - 1 replica NOTE VIDEO SAYS TWO BUT ONLY ONE NEEDED
 
 - worker
+
   - bretfisher/examplevotingapp_worker
   - backend processor of redis and storing results in postgres
   - no public ports
@@ -38,6 +41,7 @@ Use the new `--mount` format to do this: `--mount type=volume,source=db-data,tar
   - 1 replica
 
 - db
+
   - postgres:9.4
   - one named volume needed, pointing to /var/lib/postgresql/data
   - on backend network

@@ -11,17 +11,3 @@ docker node ls
 ```bash
 docker node update --role manager <node_id>
 ```
-
-## To get the manager / worker's token
-
-```bash
-docker swarm join-token manager
-```
-
-## Releasing node from swarm
-
-```bash
-docker swarm leave
-```
-
-NOTE: SSH into node and run below
