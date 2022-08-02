@@ -56,6 +56,22 @@ docker compose build
 docker compose down --rmi local
 ```
 
+## Composing with multiple compose files
+
+```bash
+docker compose up -f docker-compose.yml -f docker-compose.test.yml -d
+```
+
+NOTE1: the second compose file will be overridding values in the first on, and thrid one to second and so on.
+
+NOTE2: By default `docker-compose.override.yml` file will be overriding all values in `docker-compose.yml`. You don't have specify any flags in the command
+
+## Creating a single compose file with multiple compose files
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml config > output.yml
+```
+
 ## Docker Compose run & delete after execution
 
 ```bash
