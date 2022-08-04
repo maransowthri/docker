@@ -67,3 +67,9 @@ NOTE: if volume `mysql_db` is already there if will be reused, otherwise it will
 ```bash
 docker container run -p 80:80 -d --name nginx -v /$(pwd):/usr/share/nginx/html nginx
 ```
+
+## Run container with health checks
+
+```bash
+docker container run --name postgres -d -e POSTGRES_PASSWORD=password --health-cmd="pg_isready -U postgres || exit 1" postgres
+```
