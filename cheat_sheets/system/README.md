@@ -6,6 +6,12 @@
 docker system df
 ```
 
+## Per cmponent level metrics
+
+```bash
+docker system df -v
+```
+
 ## Clean everything that is not running
 
 ```bash

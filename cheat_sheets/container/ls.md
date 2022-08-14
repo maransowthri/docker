@@ -11,3 +11,9 @@ docker container ls
 ```bash
 docker container ls -a
 ```
+
+## To list all container IDs (including stopped containers)
+
+```bash
+docker container ls -aq
+```
