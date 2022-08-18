@@ -54,3 +54,15 @@ docker image build -t maransowthri/nginx .
 ```bash
 docker image prune
 ```
+
+## Filtering only non kubernetes / docker images
+
+```bash
+docker image ls | grep -vE 'k8|docker|healthcheck'
+```
+
+## Listing images with a specific format
+
+```bash
+docker image list --format "table {{.ID}}\t{{.Repository}}" | grep -vE 'k8|docker|healthcheck'
+```
