@@ -24,6 +24,13 @@ docker image history <image_id>
 docker image inspect <image_id>
 ```
 
+## Read a specific meta data such as Os
+
+```bash
+docker image inspect b692a91e4e15 --format '{{.Os}}'
+docker image inspect b692a91e4e15 --format '{{json .ContainerConfig.Env}}' # in JSON format
+```
+
 ## Pull image from repositories
 
 ```bash
@@ -49,10 +56,16 @@ docker image push nginx
 docker image build -t maransowthri/nginx .
 ```
 
-## Cleaning up all images
+## Cleaning up all dangling images (images which are not tagged and also not referenced by containers)
 
 ```bash
 docker image prune
+```
+
+## Cleaning up all images which are not referenced by containers
+
+```bash
+docker image prune -a
 ```
 
 ## Filtering only non kubernetes / docker images
@@ -65,4 +78,22 @@ docker image ls | grep -vE 'k8|docker|healthcheck'
 
 ```bash
 docker image list --format "table {{.ID}}\t{{.Repository}}" | grep -vE 'k8|docker|healthcheck'
+```
+
+## Saving an image as a tar file
+
+```bash
+docker image save nginx -o mynginx.tar
+```
+
+## importing an image from a tar file
+
+```bash
+docker image load -i mynginx.tar
+```
+
+## Flatening an image into single layer
+
+```bash
+docker image import mynginx.tar
 ```
