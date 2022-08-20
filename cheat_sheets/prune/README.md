@@ -1,11 +1,12 @@
-# `docker prune` Commands
+# `docker XXXX prune` Commands
 
 ```bash
+docker container rm -f $(docker container ls -aq) #Stops all running container
+docker container prune -f # Removes all stopped containers
 docker image prune -f # Removes dangling images
 docker image prune -a -f # Removes all unused images
 docker builder prune -f # Removes dangling build caches
 docker builder prune -a -f # Removes all build caches
-docker container prune -f # Removes all stopped containers
 docker volume prune -f # Removes all unused local volumes
 docker network prune -f # Removes all unused networks
 docker system prune -f # Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
