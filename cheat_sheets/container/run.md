@@ -73,3 +73,17 @@ docker container run -p 80:80 -d --name nginx -v /$(pwd):/usr/share/nginx/html n
 ```bash
 docker container run --name postgres -d -e POSTGRES_PASSWORD=password --health-cmd="pg_isready -U postgres || exit 1" postgres
 ```
+
+## Publish all exposed ports in the container on random ports of the host
+
+```bash
+docker container run -d -P nginx
+```
+
+## Creating dns name for a other container while launching a new container
+
+```bash
+docker container run -dt --link <src_container_name>:<link_name> busybox
+```
+
+NOTE: it's a legacy approach that's supported in default bridge network. For user defined bridge network link is automatically created as the container name which is the recommened approach
