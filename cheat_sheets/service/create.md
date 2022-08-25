@@ -22,7 +22,10 @@ docker service create --name postgres1 -d -e POSTGRES_PASSWORD=password --health
 ## Creating service in antivirus mode
 
 ```bash
-docker service create --name antivirus -dt --mode global ubuntu 
+docker service create --name antivirus -dt --mode global ubuntu
 ```
 
-NOTE: `--mode global` will launch specified task in all running nodes
+NOTE:
+
+- `--mode global` will launch specified task in all running nodes
+- global services will also be launched in new nodes which are created after creating global service

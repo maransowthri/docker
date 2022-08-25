@@ -11,3 +11,15 @@ docker node ls
 ```bash
 docker node update --role manager <node_id>
 ```
+
+## Draining a node for maintanence (aka moving all services running on a node to a different node)
+
+```bash
+docker node update --availability drain <node_id>
+```
+
+## Bringing back node to active state
+
+```bash
+docker node update --availability active <node_id>
+```

@@ -21,7 +21,7 @@ docker service rm <service_id>
 ## Know more details about the service
 
 ```bash
-docker service inspect <service_id>
+docker service inspect <service_id> [--pretty]
 ```
 
 ## Service logs
