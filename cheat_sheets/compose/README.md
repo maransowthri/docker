@@ -6,6 +6,12 @@
 docker compose up
 ```
 
+## Checking if the formatting of docker-compose.yaml is correct
+
+```bash
+docker compose config
+```
+
 ## Run compose up in the background
 
 ```bash
