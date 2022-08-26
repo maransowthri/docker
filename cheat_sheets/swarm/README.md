@@ -31,3 +31,32 @@ docker swarm leave
 ```
 
 NOTE: SSH into node and run below
+
+## Locking up docker swarm
+
+```bash
+docker swarm update --autolock=true
+```
+
+NOTE:
+
+- After executing it you won't be able to perform any docker commands like `node ls`, `service ls` etc.
+- You have to unlock the swarm by pasting the generate key from above command to execute docker commands
+
+## Unlocking docker swarm
+
+```bash
+docker swarm unlock
+```
+
+## To retrive unlock key
+
+```bash
+docker swarm unlock-key
+```
+
+## To rotate unlock key
+
+```bash
+docker swarm unlock-key --rotate
+```
