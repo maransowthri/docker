@@ -29,3 +29,15 @@ NOTE:
 
 - `--mode global` will launch specified task in all running nodes
 - global services will also be launched in new nodes which are created after creating global service
+
+## Creating service with volumes
+
+```bash
+docker service create --name myservice --mount type=volume,source=myvolume,target=/mypath nginx
+```
+
+## Creating service with constraints
+
+```bash
+docker create service --name webserver --replicas 3 --constraint node.labels.region==us-east-1 nginx
+```

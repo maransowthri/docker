@@ -23,3 +23,9 @@ docker node update --availability drain <node_id>
 ```bash
 docker node update --availability active <node_id>
 ```
+
+## Adding labels to a docker node
+
+```bash
+docker node update --label-add region=us-east-1 <node_id>
+```
