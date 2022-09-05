@@ -41,3 +41,9 @@ docker service create --name myservice --mount type=volume,source=myvolume,targe
 ```bash
 docker create service --name webserver --replicas 3 --constraint node.labels.region==us-east-1 nginx
 ```
+
+## Setting the host name to a container while launching
+
+```bash
+docker service create --name webserver --hostname="{{.Node.Hostname}}-{{.Service.Name}}" nginx
+```
