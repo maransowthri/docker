@@ -1,5 +1,11 @@
 # `docker system` Commands
 
+## Information about installed docker app
+
+```bash
+docker system info
+```
+
 ## To look at the total space occupied by docker in your system
 
 ```bash
@@ -10,6 +16,24 @@ docker system df
 
 ```bash
 docker system df -v
+```
+
+## Listen for all events such as container / volume / network - create / stop / delete
+
+```bash
+docker system events
+```
+
+## Listen to a specific event - stop
+
+```bash
+docker system events --filter 'type=container' --filter 'event=stop'
+```
+
+## Listing events happened from a particular date
+
+```bash
+docker system events --since 2022-09-07
 ```
 
 ## Clean everything that is not running

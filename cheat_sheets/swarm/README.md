@@ -6,6 +6,12 @@
 docker swarm init
 ```
 
+## Recover from losing the quoram
+
+```bash
+docker swarm init --force-new-cluster --advertise-addr <host_ip>
+```
+
 ## Advertise swarm service at a particular IP
 
 ```bash
